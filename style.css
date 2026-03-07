@@ -1,1 +1,307 @@
+/* Color Palette */
+:root {
+    --rwanda-blue: #00a8e8;
+    --navy: #002d5a;
+    --text-gray: #666;
+    --white: #ffffff;
+}
 
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* Header */
+.main-nav { background: white; padding: 15px 0; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; }
+.flex-nav { display: flex; justify-content: space-between; align-items: center; }
+.logo { display: flex; align-items: center; gap: 10px; }
+.logo img { height: 45px; }
+.brand { font-weight: bold; font-size: 1.4rem; color: #333; }
+.nav-links a { text-decoration: none; color: var(--text-gray); font-size: 0.8rem; font-weight: 700; margin: 0 12px; }
+.nav-links a.active { color: var(--rwanda-blue); }
+
+/* Hero */
+.hero { 
+    height: 480px; 
+    background: url('https://www.mineduc.gov.rw/fileadmin/_processed_/f/c/csm_HOME_HEADER_7f03bd1b78.jpg') center/cover;
+}
+.hero-overlay { 
+    height: 100%; width: 100%; 
+    background: rgba(0, 0, 0, 0.4); 
+    display: flex; align-items: center; 
+}
+.hero h1 { color: white; font-size: 4rem; line-height: 1; }
+.hero p { color: white; font-size: 1.5rem; }
+
+/* Pillars (Overlap logic) */
+.pillars { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 25px; 
+    margin-top: -100px; /* Moves cards up into hero */
+}
+.pillar-card { 
+    background: white; padding: 40px 30px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+}
+.icon-tag { width: 30px; height: 30px; background: var(--rwanda-blue); transform: rotate(45deg); margin-bottom: 20px; }
+.pillar-card h3 { margin-bottom: 15px; font-size: 1.25rem; }
+.pillar-card p { font-size: 0.9rem; color: var(--text-gray); margin-bottom: 20px; }
+.read-more { font-weight: bold; color: black; text-decoration: none; font-size: 0.9rem; }
+
+/* Updates */
+.updates-section { padding: 80px 0; }
+.section-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+.updates-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.update-card img { width: 100%; border-radius: 4px; }
+.update-card h4 { margin: 15px 0; font-size: 1rem; line-height: 1.4; }
+.date { color: #999; font-size: 0.8rem; margin-bottom: 10px; }
+
+/* Agencies */
+/* Container for alignment */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.agencies-section {
+  display: flex;   /* makes items inside row horizontal */
+  gap: 20px;
+  margin-bottom: 15px; /* space between rows */
+}
+
+.agencies-sectio {
+ 
+
+    padding: 60px ;
+    background-color: #ffffff;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1px;
+    color: #000;
+}
+
+}
+
+.section-title {
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+/
+/* 3. Box Styling */
+.agency-card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 30px;
+    display: flex;
+    flex-direction: column; /* Stacks content inside the box vertically */
+    align-items: flex-start;
+    transition: 0.3s;
+    height: 100%; /* Makes all boxes in the row the same height */
+} 
+.agency-car {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 30px;
+    display: flex;
+    flex-direction: column; /* Stacks content inside the box vertically */
+    align-items: flex-start;
+    transition: 0.3s;
+    height: 100%; /* Makes all boxes in the row the same height */
+}
+.agency-card:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.agency-logo {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center; /* Centers logo horizontally inside box */
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.agency-logo img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.card-divider {
+    width: 100%;
+    border: 0;
+    border-top: 1px solid #f0f0f0;
+    margin-bottom: 20px;
+}
+
+.agency-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.agency-desc {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.visit-link {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-top: auto; /* Pushes the 'Visit' link to the very bottom */
+}
+
+/* 4. Responsive Design (Stacking on mobile) */
+@media (max-width: 1024px) {
+    .agencies-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 boxes per row on tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .agencies-grid {
+        grid-template-columns: 1fr; /* 1 box per row on phones */ 
+    }
+} 
+.agency-car.agency-card.special {display: flex;
+   }
+   .agency-car.special {
+  flex-wrap: wrap;   }
+
+/* Footer */
+.site-footer { background: var(--navy); color: white; padding: 60px 0 20px; }
+.footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+.footer-contact h3 { font-size: 2rem; margin-bottom: 30px; color: var(--rwanda-blue); }
+.footer-contact ul { list-style: none; }
+.footer-contact li { margin-bottom: 15px; }
+.social-icons { display: flex; gap: 10px; margin: 30px 0; }
+.circle-icon { width: 35px; height: 35px; background: var(--rwanda-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+.map-img { width: 100%; border-radius: 8px; }
+
+/* Floating Button */
+.floating-back { 
+    position: fixed; bottom: 20px; right: 20px; 
+    background: white; padding: 10px; border-radius: 5px; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); text-align: center;
+}
+/* Section & Grid Setup */
+.agencies-section { ; display: grid;
+    padding: 60px ;
+    background-color: #f9f9f9; /* Light background for contrast */
+  
+  grid-template-columns: repeat(4, 1fr); /* 4 boxes per row */
+  gap: 30px;
+  padding: 40px;
+  background: #f5f5f5;
+}
+
+
+
+.section-title {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: #000;
+}
+
+.agencies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+/* Individual Card Styling */
+.agency-card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 40px 30px; /* Adjusted slightly for better balance */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    transition: transform 0.2s, box-shadow 0.2s;
+    
+    /* FIX 1: Ensure padding doesn't break the width */
+    box-sizing: border-box; 
+    height: 100%; /* Ensures cards in the same row have equal height */
+}
+
+.agency-card:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transform: translateY(-3px); /* Optional: slight lift like the original site */
+}
+
+.agency-logo {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    /* Removed margin-bottom here to use margin on the divider instead */
+}
+
+.agency-logo img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.card-divider {
+    width: 100%;
+    border: 0;
+    border-top: 1px solid #eeeeee;
+    /* FIX 2: Balanced spacing above AND below the line */
+    margin: 20px 0 25px 0; 
+}
+
+.agency-name {
+    font-size: 1.4rem; /* Scaled down slightly to match screenshot better */
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 12px;
+}
+
+.agency-desc {
+    font-size: 0.95rem;
+    color: #777777;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.visit-link {
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: inline-block;
+    
+    /* FIX 3: Push the link to the bottom of the card */
+    margin-top: auto; 
+}
+ .agencies-grid.agencies-grid {display: flex;         /* Activates horizontal layout */
+    flex-direction: row;   /* Default: items go left to right */
+    gap: 20px;             
+    justify-content: center}
+    .agencies-grid { flex-wrap: wrap; }
+   
+.agencies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;}
+ .color {
+  display: flex;
+  justify-content: center; /* horizontal */
+*/
+  background-color: var(--rwanda-blue);
+  border: 3px solid var(--rwanda-blue);
+  margin: 5px;
+  font-weight: bold;
+  font-size: 20px;
+  height: 100px; /* required for vertical centering */
+}
